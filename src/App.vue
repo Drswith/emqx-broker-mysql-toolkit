@@ -1,29 +1,44 @@
+<!--
+ * @Author: Drswith
+ * @Date: 2021-06-27 18:05:51
+ * @LastEditors: Drswith
+ * @LastEditTime: 2021-06-27 22:26:24
+ * @FilePath: \emqx-community-mysql-toolkit\src\App.vue
+-->
 <template>
   <div id="app">
-    <img
-      alt="Vue logo"
-      src="./assets/logo.png"
-    />
-    <HelloWorld msg="Hello Vue 2 + Vite" />
+    <Main />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Main from "./view/Main.vue";
+import "./style/iconfont.js";
+
 export default {
   components: {
-    HelloWorld,
+    Main,
   },
 };
 </script>
 
-<style>
+<style lang='scss'>
+@import '@/style/style.scss';
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+}
+body {
+  font-family: Roboto, Helvetica Neue, Helvetica, Work sans, Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: $app-color-text;
+  background-color: $app-bg;
+  margin: 0;
 }
 </style>

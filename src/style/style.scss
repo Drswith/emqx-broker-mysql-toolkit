@@ -1,0 +1,25 @@
+$base-font-size: 14px;                                  // 基础字体大小
+$base-font-weight: 400;                                 // 基础字重
+
+$base-color-white: #ffffff;                           // 基础白色
+$base-color-black: #000000;                           // 基础黑色
+
+$color-text-1: #a7a7a7;                               // 基础字体颜色
+
+$color-primary: #00b173;                              //  主色
+$color-primary-shadow: #02d48a;                       //  主色阴影
+
+$app-bg: #161616;                                     // 全局背景色
+$app-color-text: $color-text-1;                         // 全局字体颜色
+
+$sidebar-bg: rgb(36, 35, 39);                         //  侧边栏背景色
+$sidebar-item-color-text: $app-color-text;              //  侧边栏字体颜色
+$sidebar-item-hover: #393a3e;                         //  侧边栏item悬停背景色
+$sidebar-item-hover-color-text: $base-color-white;      //  侧边栏item字体颜色
+$sidebar-item-active: $color-primary;                   //  侧边栏item激活背景色
+$sidebar-item-active-color-text: $base-color-white;     //  侧边栏item激活字体颜色
+$sidebar-item-active-shadow: $color-primary-shadow;     //  侧边栏item激活阴影色
+
+$content-bg: rgb(31, 30, 32);                         //  内容区背景色
+
+$nav-color-text: $base-color-white;                     //  右上角nav字体颜色
