@@ -1,8 +1,14 @@
-# vite-vue2-starter
+<!--
+ * @Author: Drswith
+ * @Date: 2021-06-28 09:15:28
+ * @LastEditors: Drswith
+ * @LastEditTime: 2021-06-28 09:16:46
+ * @FilePath: \emqx-community-mysql-toolkit\README.md
+-->
 
-A simple start for using vue2 with vite, using [underfin's vite-plugin-vue2](https://github.com/underfin/vite-plugin-vue2).
+# EMQ X Community Mysql Toolkit
 
-## Scripts
+## Devleop Scripts
 
 ```bash
   npm run dev # start dev server
