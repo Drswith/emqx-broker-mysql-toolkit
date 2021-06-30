@@ -2,21 +2,24 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:05:51
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-27 22:26:24
+ * @LastEditTime: 2021-06-30 12:33:45
  * @FilePath: \emqx-community-mysql-toolkit\src\App.vue
 -->
 <template>
   <div id="app">
-    <Main />
+    <Setup />
+    <!-- <Main /> -->
   </div>
 </template>
 
 <script>
 import Main from "./view/Main.vue";
+import Setup from "./view/Setup.vue";
 import "./style/iconfont.js";
 
 export default {
   components: {
+    Setup,
     Main,
   },
 };

@@ -2,20 +2,22 @@
  * @Author: Drswith
  * @Date: 2021-06-27 19:12:47
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-27 22:29:29
- * @FilePath: \emqx-community-mysql-toolkit\src\components\Logo.vue
+ * @LastEditTime: 2021-06-29 21:10:52
+ * @FilePath: \emqx-community-mysql-toolkit\src\layout\Logo.vue
 -->
 <template>
   <div class="logo-container">
     <img class="logo__img" alt="Vue logo" src="../assets/logo.png" />
-    <div class="logo__title">Dashboard</div>
+    <div class="logo__title">{{title}}</div>
   </div>
 </template>
 <script>
 export default {
   name: "Logo",
   components: {},
-  props: {},
+  props: {
+    title:String
+  },
   data() {
     return {};
   },

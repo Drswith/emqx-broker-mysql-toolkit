@@ -1,10 +1,13 @@
 $base-font-size: 14px;                                  // 基础字体大小
 $base-font-weight: 400;                                 // 基础字重
 
+$base-border-radius-small:4px;
+
 $base-color-white: #ffffff;                           // 基础白色
 $base-color-black: #000000;                           // 基础黑色
 
 $color-text-1: #a7a7a7;                               // 基础字体颜色
+$color-text-2: #f2f6fc;                               
 
 $color-primary: #00b173;                              //  主色
 $color-primary-shadow: #02d48a;                       //  主色阴影
@@ -23,3 +26,67 @@ $sidebar-item-active-shadow: $color-primary-shadow;     //  侧边栏item激活�
 $content-bg: rgb(31, 30, 32);                         //  内容区背景色
 
 $nav-color-text: $base-color-white;                     //  右上角nav字体颜色
+
+
+$dark-input-color-border:#37363d;
+$dark-input-color-border-hover:$color-text-1;
+$dark-input-color-bg:transparent;
+$dark-input-color-text:$color-text-1;
+
+$btn-bg:#efefef;
+$btn-bg-hover:mix($btn-bg, $base-color-black,75) ;
+
+$btn-primary-bg:$color-primary;
+$btn-primary-bg-hover:mix($btn-primary-bg, $base-color-black,75) ;
+
+.dark-input{
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0;
+  -webkit-appearance: none;
+  background-image: none;
+  border-radius: $base-border-radius-small;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: inherit;
+  outline: none;
+  padding: 0 15px;
+  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  width: 100%;
+  color: $dark-input-color-text;
+  height: 36px;
+  border-color: $dark-input-color-border;
+  background-color: $dark-input-color-bg;
+  &:hover{
+    border-color: $dark-input-color-border-hover;
+  }
+}
+
+.btn {
+  height: 36px;
+  width: 145px;
+  border-radius: 4px;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  background-color: $btn-bg;
+  &:hover{
+    background-color: $btn-bg-hover;
+  }
+  &__primary {
+    color: $base-color-white;
+    background-color: $btn-primary-bg;
+    &:hover {
+      background-color: $btn-primary-bg-hover ;
+    }
+  } 
+}

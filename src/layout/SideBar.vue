@@ -2,12 +2,12 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:33:20
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-27 22:10:26
- * @FilePath: \emqx-community-mysql-toolkit\src\components\SideBar.vue
+ * @LastEditTime: 2021-06-29 21:11:10
+ * @FilePath: \emqx-community-mysql-toolkit\src\layout\SideBar.vue
 -->
 <template>
   <div class="side-bar-container">
-    <Logo />
+    <Logo title="Dashboard"/>
     <div class="menu">
       <div
         v-for="(item, idx) in menuConfig"

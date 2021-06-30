@@ -2,8 +2,8 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:34:01
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-27 22:16:04
- * @FilePath: \emqx-community-mysql-toolkit\src\components\Content.vue
+ * @LastEditTime: 2021-06-30 12:33:09
+ * @FilePath: \emqx-community-mysql-toolkit\src\layout\Content.vue
 -->
 <template>
   <div class="content-container">
@@ -18,7 +18,7 @@
 </template>
 <script>
 import menuConfig from "@/config/menu";
-import Nav from "@/components/Nav.vue";
+import Nav from "@/layout/Nav.vue";
 export default {
   name: "Content",
   components: { Nav },
@@ -40,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/style/style.scss";
 .content-container {
-  width: 600px;
+  width:100%;
   background-color: $content-bg;
   padding: 24px;
   box-sizing: border-box;
