@@ -2,13 +2,21 @@
  * @Author: Drswith
  * @Date: 2021-06-29 20:33:48
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-30 13:37:20
+ * @LastEditTime: 2021-06-30 16:08:39
  * @FilePath: \emqx-community-mysql-toolkit\src\components\SetupBegin.vue
 -->
 <template>
   <div class="container">
-    <div>
-      <Logo />
+    <div class="logo">
+      <div class="logo-container">
+        <img class="logo__img" alt="EMQ X logo" src="../assets/emqx-logo.svg" />
+        <div class="logo__title">{{ title }}</div>
+      </div>
+      <img style="height:36px;" src="../assets/x.svg" />
+      <div class="logo-container">
+        <img class="logo__img" alt="MySQL logo" src="../assets/mysql-logo.png" />
+        <div class="logo__title">{{ title }}</div>
+      </div>
     </div>
     <div class="welcome">欢迎使用 {{ tookitName }}</div>
     <div class="desc">简单几步将你的数据持久化</div>
@@ -35,9 +43,9 @@ export default {
   created() {},
   mounted() {},
   methods: {
-    onNextStepClick(){
+    onNextStepClick() {
       this.$emit("onNextStepClick");
-    }
+    },
   },
   computed: {
     tookitName() {
@@ -57,27 +65,35 @@ export default {
   overflow: hidden;
   box-sizing: border-box;
 }
-
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+}
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  &__img {
+    height: 72px;
+    margin: 0 0 8px;
+  }
+  &__title {
+    color: #fff;
+    font-size: 18px;
+  }
+}
 .welcome {
+  color: $color-text-2;
   font-size: 24px;
   margin-bottom: 4px;
 }
 .desc {
+  color: $color-text-2;
   font-size: 18px;
   margin-bottom: 50px;
 }
-// .btn {
-//   height: 36px;
-//   width: 145px;
-//   border-radius: 4px;
-//   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
-//   cursor: pointer;
-//   user-select: none;
-//   color: $base-color-white;
-//   background-color: $color-primary;
-//   border: none;
-//   &:hover {
-//     background-color: mix($color-primary, $base-color-black,75) ;
-//   }
-// }
 </style>

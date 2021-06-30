@@ -2,12 +2,12 @@
  * @Author: Drswith
  * @Date: 2021-06-27 19:12:47
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-29 21:10:52
+ * @LastEditTime: 2021-06-30 16:12:05
  * @FilePath: \emqx-community-mysql-toolkit\src\layout\Logo.vue
 -->
 <template>
   <div class="logo-container">
-    <img class="logo__img" alt="Vue logo" src="../assets/logo.png" />
+    <img class="logo__img" alt="Vue logo" src="../assets/emqx-logo.svg" />
     <div class="logo__title">{{title}}</div>
   </div>
 </template>
