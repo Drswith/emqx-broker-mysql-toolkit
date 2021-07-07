@@ -1,7 +1,7 @@
-$base-font-size: 14px;                                  // 基础字体大小
+$base-font-size: 1.4rem;                                  // 基础字体大小
 $base-font-weight: 400;                                 // 基础字重
 
-$base-border-radius-small:4px;
+$base-border-radius-small:0.4rem;
 
 $base-color-white: #ffffff;                           // 基础白色
 $base-color-black: #000000;                           // 基础黑色
@@ -53,16 +53,16 @@ $btn-primary-bg-hover:mix($btn-primary-bg, $base-color-black,75) ;
   -webkit-appearance: none;
   background-image: none;
   border-radius: $base-border-radius-small;
-  border: 1px solid #dcdfe6;
+  border: 0.1rem solid #dcdfe6;
   box-sizing: border-box;
   display: inline-block;
   font-size: inherit;
   outline: none;
-  padding: 0 15px;
+  padding: 0 1.5rem;
   transition: border-color .2s cubic-bezier(.645,.045,.355,1);
   width: 100%;
   color: $dark-input-color-text;
-  height: 36px;
+  height: 3.6rem;
   border-color: $dark-input-color-border;
   background-color: $dark-input-color-bg;
   &:hover{
@@ -71,9 +71,9 @@ $btn-primary-bg-hover:mix($btn-primary-bg, $base-color-black,75) ;
 }
 
 .btn {
-  height: 36px;
-  width: 145px;
-  border-radius: 4px;
+  height: 3.6rem;
+  width: 14.5rem;
+  border-radius: $base-border-radius-small;
   transition: border-color 0.3s, background-color 0.3s, color 0.3s;
   cursor: pointer;
   user-select: none;
