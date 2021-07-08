@@ -8,11 +8,9 @@
 <template>
   <div class="container">
     <!-- 左侧边栏 -->
-    <SideBar
-      @sideBarClick="(currentView) => (this.currentView = currentView)"
-    />
+    <SideBar />
     <!-- 右侧内容区 -->
-    <Content :value="currentView" />
+    <Content />
   </div>
 </template>
 
@@ -26,19 +24,12 @@ export default {
   },
   name: "Main",
   data() {
-    return {
-      currentView: 0,
-    };
+    return {};
   },
+  computed: {},
   methods: {},
-  mounted(){
-    this.$store.get()
-  }
+  mounted() {},
 };
 </script>
 
-<style lang="scss" scoped>
-
-
-
-</style>
+<style lang="scss" scoped></style>

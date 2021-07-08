@@ -5,6 +5,7 @@
  * @LastEditTime: 2021-07-08 21:00:03
  * @FilePath: \emqx-broker-mysql-toolkit\src\store\store.js
  */
+
 let store = {
   debug: true,
   state: {
@@ -12,34 +13,30 @@ let store = {
     setupCurrentView: 0,
   },
   get(key = undefined) {
-    if(key == undefined){
-      // console.error(`[Store][GET] --> ${key}\r\n <-- [Params Error]`);
-      throw new Error(`[Store][GET] --> ${key}\r\n <-- [Params Error]`)
-    }
-    if (this.state[key] == undefined) {
-      if (this.debug) {
-        console.error(`[Store][GET] --> ${key}\r\n <-- [Undefined]`);
-      }
-      return undefined
+    if (key == undefined || typeof key != "string") {
+      throw new Error(`\r\n[Store][GET] --> ${key}\r\n --> [Params Error]`);
     } else {
-      if (this.debug) {
-        console.log("[Store][GET] --> ", key);
-        console.log(" <-- ", this.state[key]);
+      if (this.state[key] == undefined) {
+        if (this.debug) {
+          throw new Error(`\r\n[Store][GET] --> ${key}\r\n --> [Undefined]`);
+        }
+      } else {
+        if (this.debug) {
+          console.log(`[Store][GET] --> ${key} --> ${this.state[key]}`);
+        }
       }
       return this.state[key];
     }
   },
-  set(params = {}) {
-    const { key = null, value = null } = params;
-    if (key!== null && value !== null) {
-
-    }else {
+  set(key = null, value = null) {
+    if (key !== null && value !== null && typeof key == "string") {
+      this.state[key] = value;
+    } else {
       if (this.debug) {
         console.error(`[Store][SET] --> ${key}\r\n <-- [Params Error]`);
       }
-      return undefined
+      return undefined;
     }
   },
 };
-
 export default store;

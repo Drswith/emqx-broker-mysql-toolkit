@@ -7,7 +7,7 @@
 -->
 <template>
   <div class="side-bar-container">
-    <Logo title="Dashboard"/>
+    <Logo title="Dashboard" />
     <div class="menu">
       <div
         v-for="(item, idx) in menuConfig"
@@ -45,20 +45,20 @@ export default {
   mounted() {},
   methods: {
     _onClick(idx) {
+      // console.log(idx);
       this.current = idx;
+      this.$store.set("mainCurrentView", idx);
+      console.log(this.$store.get("mainCurrentView"));
     },
   },
   computed: {},
-  watch: {
-    current: function () {
-      console.log(this.current);
-      this.$emit("sideBarClick", this.current);
-    },
+  created() {
+    this.current = this.$store.get("mainCurrentView");
   },
 };
 </script>
 <style lang="scss" scoped>
-@import '@/style/style.scss';
+@import "@/style/style.scss";
 .side-bar-container {
   background-color: $sidebar-bg;
   box-sizing: border-box;

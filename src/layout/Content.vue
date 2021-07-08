@@ -9,7 +9,9 @@
   <div class="content-container">
     <!-- 标题 -->
     <div class="content__header">
-      <div class="content__header-title">{{ menuConfig[value].label }}</div>
+      <div class="content__header-title">
+        {{ menuConfig[mainCurrentView].label }}
+      </div>
       <Nav />
     </div>
     <!-- 内容 -->
@@ -22,9 +24,7 @@ import Nav from "@/layout/Nav.vue";
 export default {
   name: "Content",
   components: { Nav },
-  props: {
-    value: Number,
-  },
+  props: {},
   data() {
     return {
       menuConfig,
@@ -33,14 +33,22 @@ export default {
   created() {},
   mounted() {},
   methods: {},
-  computed: {},
-  watch: {},
+  computed: {
+    mainCurrentView() {
+      return this.$store.state.mainCurrentView;
+    },
+  },
+  watch: {
+    mainCurrentView(newValue, oldValue) {
+      console.log("change");
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 @import "@/style/style.scss";
 .content-container {
-  width:100%;
+  width: 100%;
   background-color: $content-bg;
   padding: 24px;
   box-sizing: border-box;
