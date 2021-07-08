@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-29 21:21:04
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-30 13:40:33
+ * @LastEditTime: 2021-06-30 16:22:55
  * @FilePath: \emqx-community-mysql-toolkit\src\components\ConfigEmqx.vue
 -->
 <template>
@@ -13,11 +13,11 @@
       <input class="dark-input" type="text" />
     </div>
     <div class="step__item">
-      <div class="step__item-title">请输入 {{ name }} 管理用户名</div>
+      <div class="step__item-title">请输入 {{ name }} 管理AppID</div>
       <input class="dark-input" type="text" />
     </div>
     <div class="step__item">
-      <div class="step__item-title">请输入 {{ name }} 管理密码</div>
+      <div class="step__item-title">请输入 {{ name }} 管理AppSecret</div>
       <input class="dark-input" type="text" />
     </div>
     <div class="step__item">
