@@ -25,8 +25,8 @@ export default {
 };
 </script>
 
-<style lang='scss'>
-@import '@/style/style.scss';
+<style lang="scss">
+@import "@/style/style.scss";
 #app {
   display: flex;
   justify-content: center;
@@ -43,5 +43,9 @@ body {
   color: $app-color-text;
   background-color: $app-bg;
   margin: 0;
+  font-size: 1.4rem;
+}
+html {
+  font-size: 62.5%;
 }
 </style>

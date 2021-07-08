@@ -6,7 +6,7 @@
  * @FilePath: \emqx-community-mysql-toolkit\README.md
 -->
 
-# EMQ X Community Mysql Toolkit
+# EMQ X Broker Mysql Toolkit
 
 ## Devleop Scripts
 
