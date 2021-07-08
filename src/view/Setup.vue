@@ -2,11 +2,12 @@
  * @Author: Drswith
  * @Date: 2021-06-29 19:48:20
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-30 13:41:04
+ * @LastEditTime: 2021-07-08 10:08:19
  * @FilePath: \emqx-community-mysql-toolkit\src\view\Setup.vue
 -->
 <template>
   <div class="container">
+    <div class="setup-container">
     <div v-show="step === 0">
       <SetupBegin
         @onPreviousStepClick="onPreviousStepClick"
@@ -25,6 +26,7 @@
         @onNextStepClick="onNextStepClick"
       />
     </div>
+  </div>
   </div>
 </template>
 
@@ -57,24 +59,24 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/style/style.scss";
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 600px;
-  max-width: 800px;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-sizing: border-box;
+.setup-container {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // min-height: 600px;
+  // max-width: 800px;
+  // width: 100%;
+  // border-radius: 8px;
+  // overflow: hidden;
+  // box-sizing: border-box;
   background-color: $content-bg;
 }
 </style>
 <style lang="scss" >
 @import "@/style/style.scss";
-.setup-container {
-  min-height: 80%;
-}
+// .setup-container {
+//   min-height: 80%;
+// }
 
 .step {
   color: $color-text-2;

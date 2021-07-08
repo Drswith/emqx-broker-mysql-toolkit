@@ -35,25 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-    display: flex;
-    height: 100%;
-    min-height: 60rem;
-    min-width: 100rem;
-    border-radius: .8rem;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-@media screen and (max-width: 1200px) {
-  .container {
-    display: flex;
-    height: 100%;
-    min-height: 100vh;
-    min-width: 100vw;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-}
+
 
 
 </style>

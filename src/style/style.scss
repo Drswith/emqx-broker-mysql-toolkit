@@ -1,46 +1,45 @@
-$root-font-size: 62.5%;                                 // 根元素字体大小
-$base-font-size: 1.4rem;                                // 基础字体大小
-$base-font-weight: 400;                                 // 基础字重
+$root-font-size: 62.5%; // 根元素字体大小
+$base-font-size: 1.4rem; // 基础字体大小
+$base-font-weight: 400; // 基础字重
 
-$base-border-radius-small:0.4rem;
+$base-border-radius-small: 0.4rem;
 
-$base-color-white: #ffffff;                           // 基础白色
-$base-color-black: #000000;                           // 基础黑色
+$base-color-white: #ffffff; // 基础白色
+$base-color-black: #000000; // 基础黑色
 
-$color-text-1: #a7a7a7;                               // 基础字体颜色
-$color-text-2: #f2f6fc;                               
+$color-text-1: #a7a7a7; // 基础字体颜色
+$color-text-2: #f2f6fc;
 
-$color-primary: #00b173;                              //  主色
-$color-primary-shadow: #02d48a;                       //  主色阴影
+$color-primary: #00b173; //  主色
+$color-primary-shadow: #02d48a; //  主色阴影
 
-$app-bg: #161616;                                     // 全局背景色
-$app-color-text: $color-text-1;                         // 全局字体颜色
+$app-bg: #161616; // 全局背景色
+$app-color-text: $color-text-1; // 全局字体颜色
 
-$sidebar-bg: rgb(36, 35, 39);                         //  侧边栏背景色
-$sidebar-item-color-text: $app-color-text;              //  侧边栏字体颜色
-$sidebar-item-hover: #393a3e;                         //  侧边栏item悬停背景色
-$sidebar-item-hover-color-text: $base-color-white;      //  侧边栏item字体颜色
-$sidebar-item-active: $color-primary;                   //  侧边栏item激活背景色
-$sidebar-item-active-color-text: $base-color-white;     //  侧边栏item激活字体颜色
-$sidebar-item-active-shadow: $color-primary-shadow;     //  侧边栏item激活阴影色
+$sidebar-bg: rgb(36, 35, 39); //  侧边栏背景色
+$sidebar-item-color-text: $app-color-text; //  侧边栏字体颜色
+$sidebar-item-hover: #393a3e; //  侧边栏item悬停背景色
+$sidebar-item-hover-color-text: $base-color-white; //  侧边栏item字体颜色
+$sidebar-item-active: $color-primary; //  侧边栏item激活背景色
+$sidebar-item-active-color-text: $base-color-white; //  侧边栏item激活字体颜色
+$sidebar-item-active-shadow: $color-primary-shadow; //  侧边栏item激活阴影色
 
-$content-bg: rgb(31, 30, 32);                         //  内容区背景色
+$content-bg: rgb(31, 30, 32); //  内容区背景色
 
-$nav-color-text: $base-color-white;                     //  右上角nav字体颜色
+$nav-color-text: $base-color-white; //  右上角nav字体颜色
 
+$dark-input-color-border: #37363d;
+$dark-input-color-border-hover: $color-text-1;
+$dark-input-color-bg: transparent;
+$dark-input-color-text: $color-text-1;
 
-$dark-input-color-border:#37363d;
-$dark-input-color-border-hover:$color-text-1;
-$dark-input-color-bg:transparent;
-$dark-input-color-text:$color-text-1;
+$btn-bg: #efefef;
+$btn-bg-hover: mix($btn-bg, $base-color-black, 75);
 
-$btn-bg:#efefef;
-$btn-bg-hover:mix($btn-bg, $base-color-black,75) ;
+$btn-primary-bg: $color-primary;
+$btn-primary-bg-hover: mix($btn-primary-bg, $base-color-black, 75);
 
-$btn-primary-bg:$color-primary;
-$btn-primary-bg-hover:mix($btn-primary-bg, $base-color-black,75) ;
-
-.dark-input{
+.dark-input {
   text-rendering: auto;
   letter-spacing: normal;
   word-spacing: normal;
@@ -60,13 +59,13 @@ $btn-primary-bg-hover:mix($btn-primary-bg, $base-color-black,75) ;
   font-size: inherit;
   outline: none;
   padding: 0 1.5rem;
-  transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 100%;
   color: $dark-input-color-text;
   height: 3.6rem;
   border-color: $dark-input-color-border;
   background-color: $dark-input-color-bg;
-  &:hover{
+  &:hover {
     border-color: $dark-input-color-border-hover;
   }
 }
@@ -80,14 +79,63 @@ $btn-primary-bg-hover:mix($btn-primary-bg, $base-color-black,75) ;
   user-select: none;
   border: none;
   background-color: $btn-bg;
-  &:hover{
+  &:hover {
     background-color: $btn-bg-hover;
   }
   &__primary {
     color: $base-color-white;
     background-color: $btn-primary-bg;
     &:hover {
-      background-color: $btn-primary-bg-hover ;
+      background-color: $btn-primary-bg-hover;
     }
-  } 
+  }
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+}
+body {
+  font-family: Roboto, Helvetica Neue, Helvetica, Work sans, Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $app-color-text;
+  background-color: $app-bg;
+  margin: 0;
+  font-size: $base-font-size;
+}
+html {
+  font-size: $root-font-size;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  min-height: 60rem;
+  min-width: 100rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    display: flex;
+    height: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+}
+
+.test-btn {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
 }
