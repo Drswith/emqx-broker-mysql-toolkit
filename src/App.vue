@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:05:51
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-30 16:11:35
+ * @LastEditTime: 2021-07-08 09:40:57
  * @FilePath: \emqx-community-mysql-toolkit\src\App.vue
 -->
 <template>
@@ -43,9 +43,9 @@ body {
   color: $app-color-text;
   background-color: $app-bg;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: $base-font-size;
 }
 html {
-  font-size: 62.5%;
+  font-size: $root-font-size;
 }
 </style>
