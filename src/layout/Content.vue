@@ -15,7 +15,9 @@
       <Nav />
     </div>
     <!-- 内容 -->
-    <div class="content__body"></div>
+    <div class="content__body">
+      占位符 {{ menuConfig[mainCurrentView].label }}
+    </div>
   </div>
 </template>
 <script>
@@ -39,9 +41,9 @@ export default {
     },
   },
   watch: {
-    mainCurrentView(newValue, oldValue) {
-      console.log("change");
-    },
+    // mainCurrentView(newValue, oldValue) {
+    //   console.log("change");
+    // },
   },
 };
 </script>
@@ -63,6 +65,7 @@ export default {
     color: $nav-color-text;
   }
   &__body {
+    font-size: 1.4rem;
   }
 }
 </style>

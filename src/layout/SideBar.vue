@@ -12,7 +12,9 @@
       <div
         v-for="(item, idx) in menuConfig"
         :key="idx"
-        :class="current == idx ? 'menu__item menu__item-active' : 'menu__item'"
+        :class="
+          mainCurrentView == idx ? 'menu__item menu__item-active' : 'menu__item'
+        "
         @click="_onClick(idx)"
       >
         <icon-font :name="item.icon" customClass="menu__item-img" />
@@ -22,13 +24,14 @@
           type="radio"
           :name="item.name"
           :value="idx"
-          v-model="current"
+          v-model="mainCurrentView"
         />
       </div>
     </div>
   </div>
 </template>
 <script>
+import { mapMutations } from "vuex";
 import Logo from "./Logo.vue";
 import menuConfig from "@/config/menu";
 export default {
@@ -38,23 +41,29 @@ export default {
   data() {
     return {
       menuConfig,
-      current: 0,
     };
   },
   created() {},
   mounted() {},
   methods: {
+    ...mapMutations({
+      changeMain: "CHANGE_MAIN", // 将 `this.changeMain()` 映射为 `this.$store.commit('CHANGE_MAIN')`
+    }),
     _onClick(idx) {
-      // console.log(idx);
-      this.current = idx;
-      this.$store.set("mainCurrentView", idx);
-      console.log(this.$store.get("mainCurrentView"));
+      this.changeMain(idx);
     },
   },
-  computed: {},
-  created() {
-    this.current = this.$store.get("mainCurrentView");
+  computed: {
+    mainCurrentView: {
+      get() {
+        return this.$store.state.mainCurrentView;
+      },
+      set(value) {
+        this.changeMain(value);
+      },
+    },
   },
+  created() {},
 };
 </script>
 <style lang="scss" scoped>
