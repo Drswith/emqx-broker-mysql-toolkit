@@ -2,13 +2,14 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:05:51
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-30 16:11:35
- * @FilePath: \emqx-broker-mysql-gadget\src\App.vue
+ * @LastEditTime: 2021-07-08 20:30:30
+ * @FilePath: \emqx-broker-mysql-toolkit\src\App.vue
 -->
 <template>
   <div id="app">
-    <!-- <Setup /> -->
-    <Main />
+    <button class="test-btn" @click="onClick">切换</button>
+    <Setup v-if="status" />
+    <Main v-else/>
   </div>
 </template>
 
@@ -18,30 +19,22 @@ import Setup from "./view/Setup.vue";
 import "./style/iconfont.js";
 
 export default {
+  data(){
+    return{
+      status:true
+    }
+  },
   components: {
     Setup,
     Main,
   },
+  methods:{
+    onClick(){
+      this.status = !this.status
+    }
+  }
 };
 </script>
 
-<style lang='scss'>
-@import '@/style/style.scss';
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  box-sizing: border-box;
-  font-size: $base-font-size;
-  font-weight: $base-font-weight;
-}
-body {
-  font-family: Roboto, Helvetica Neue, Helvetica, Work sans, Arial, sans-serif;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: $app-color-text;
-  background-color: $app-bg;
-  margin: 0;
-}
+<style lang="scss">
 </style>

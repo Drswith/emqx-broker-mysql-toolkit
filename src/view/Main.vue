@@ -35,12 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  display: flex;
-  min-height: 600px;
-  width: 800px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-sizing: border-box;
-}
+
+
+
 </style>
