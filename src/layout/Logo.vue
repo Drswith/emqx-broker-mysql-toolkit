@@ -3,7 +3,7 @@
  * @Date: 2021-06-27 19:12:47
  * @LastEditors: Drswith
  * @LastEditTime: 2021-06-30 16:12:05
- * @FilePath: \emqx-community-mysql-toolkit\src\layout\Logo.vue
+ * @FilePath: \emqx-broker-mysql-gadget\src\layout\Logo.vue
 -->
 <template>
   <div class="logo-container">

@@ -3,7 +3,7 @@
  * @Date: 2021-06-29 21:02:13
  * @LastEditors: Drswith
  * @LastEditTime: 2021-06-29 21:03:39
- * @FilePath: \emqx-community-mysql-toolkit\src\utils\utils.js
+ * @FilePath: \emqx-broker-mysql-gadget\src\utils\utils.js
  */
 /**
  * @description: 将以flag连接的字符串改为空格，并首字母大写

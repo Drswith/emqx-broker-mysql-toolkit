@@ -3,7 +3,7 @@
  * @Date: 2021-06-29 20:33:48
  * @LastEditors: Drswith
  * @LastEditTime: 2021-06-30 16:08:39
- * @FilePath: \emqx-community-mysql-toolkit\src\components\SetupBegin.vue
+ * @FilePath: \emqx-broker-mysql-gadget\src\components\SetupBegin.vue
 -->
 <template>
   <div class="container">

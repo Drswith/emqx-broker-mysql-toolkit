@@ -3,7 +3,7 @@
  * @Date: 2021-06-27 20:11:58
  * @LastEditors: Drswith
  * @LastEditTime: 2021-06-27 20:28:26
- * @FilePath: \emqx-community-mysql-toolkit\src\config\menu.js
+ * @FilePath: \emqx-broker-mysql-gadget\src\config\menu.js
  */
 const menuConfig = [
   {

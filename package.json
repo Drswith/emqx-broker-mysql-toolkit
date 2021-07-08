@@ -1,5 +1,5 @@
 {
-  "name": "emqx-community-mysql-toolkit",
+  "name": "emqx-broker-mysql-gadget",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

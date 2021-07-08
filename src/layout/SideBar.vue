@@ -3,7 +3,7 @@
  * @Date: 2021-06-27 18:33:20
  * @LastEditors: Drswith
  * @LastEditTime: 2021-06-29 21:11:10
- * @FilePath: \emqx-community-mysql-toolkit\src\layout\SideBar.vue
+ * @FilePath: \emqx-broker-mysql-gadget\src\layout\SideBar.vue
 -->
 <template>
   <div class="side-bar-container">

@@ -3,7 +3,7 @@
  * @Date: 2021-06-27 19:43:16
  * @LastEditors: Drswith
  * @LastEditTime: 2021-06-27 20:08:32
- * @FilePath: \emqx-community-mysql-toolkit\src\components\IconFont.vue
+ * @FilePath: \emqx-broker-mysql-gadget\src\components\IconFont.vue
 -->
 <template>
   <svg :class="`icon ${customClass?customClass:'icon-default'}`" aria-hidden="true">
