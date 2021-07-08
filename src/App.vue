@@ -2,13 +2,14 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:05:51
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-08 09:40:57
+ * @LastEditTime: 2021-07-08 09:45:10
  * @FilePath: \emqx-community-mysql-toolkit\src\App.vue
 -->
 <template>
   <div id="app">
-    <!-- <Setup /> -->
-    <Main />
+    <button class="test-btn" @click="onClick">切换</button>
+    <Setup v-if="status" />
+    <Main v-else/>
   </div>
 </template>
 
@@ -18,10 +19,20 @@ import Setup from "./view/Setup.vue";
 import "./style/iconfont.js";
 
 export default {
+  data(){
+    return{
+      status:true
+    }
+  },
   components: {
     Setup,
     Main,
   },
+  methods:{
+    onClick(){
+      this.status = !this.status
+    }
+  }
 };
 </script>
 
@@ -47,5 +58,10 @@ body {
 }
 html {
   font-size: $root-font-size;
+}
+.test-btn{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
 }
 </style>
