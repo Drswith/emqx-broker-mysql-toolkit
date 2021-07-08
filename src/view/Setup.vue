@@ -2,13 +2,8 @@
  * @Author: Drswith
  * @Date: 2021-06-29 19:48:20
  * @LastEditors: Drswith
-<<<<<<< HEAD
- * @LastEditTime: 2021-06-30 13:41:04
- * @FilePath: \emqx-broker-mysql-gadget\src\view\Setup.vue
-=======
- * @LastEditTime: 2021-07-08 10:08:19
- * @FilePath: \emqx-community-mysql-toolkit\src\view\Setup.vue
->>>>>>> 8597860a3c2c063b23bae0e6f25e9a3eaa3857f9
+ * @LastEditTime: 2021-07-08 20:32:55
+ * @FilePath: \emqx-broker-mysql-toolkit\src\view\Setup.vue
 -->
 <template>
   <div class="container">

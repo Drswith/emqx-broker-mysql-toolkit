@@ -2,8 +2,8 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:05:51
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-27 22:26:51
- * @FilePath: \emqx-broker-mysql-gadget\src\main.js
+ * @LastEditTime: 2021-07-08 20:55:17
+ * @FilePath: \emqx-broker-mysql-toolkit\src\main.js
  */
 import Vue from 'vue';
 import App from './App.vue';
@@ -16,6 +16,8 @@ import IconFont from './components/IconFont.vue'
 Vue.component('IconFont',IconFont)
 Vue.use(IconFont)
 
+import Store from './store/store'
+Vue.prototype.$store = Store
 
 new Vue({
   render: (h) => h(App),

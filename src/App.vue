@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:05:51
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-08 20:30:30
+ * @LastEditTime: 2021-07-08 20:53:51
  * @FilePath: \emqx-broker-mysql-toolkit\src\App.vue
 -->
 <template>
@@ -21,7 +21,7 @@ import "./style/iconfont.js";
 export default {
   data(){
     return{
-      status:true
+      status:false
     }
   },
   components: {

@@ -2,20 +2,20 @@
  * @Author: Drswith
  * @Date: 2021-06-29 20:33:48
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-30 16:08:39
- * @FilePath: \emqx-broker-mysql-gadget\src\components\SetupBegin.vue
+ * @LastEditTime: 2021-07-08 20:36:25
+ * @FilePath: \emqx-broker-mysql-toolkit\src\components\SetupBegin.vue
 -->
 <template>
   <div class="container">
     <div class="logo">
       <div class="logo-container">
         <img class="logo__img" alt="EMQ X logo" src="../assets/emqx-logo.svg" />
-        <div class="logo__title">{{ title }}</div>
+        <!-- <div class="logo__title">{{ title }}123</div> -->
       </div>
       <img style="height:36px;" src="../assets/x.svg" />
       <div class="logo-container">
         <img class="logo__img" alt="MySQL logo" src="../assets/mysql-logo.png" />
-        <div class="logo__title">{{ title }}</div>
+        <!-- <div class="logo__title">{{ title }}456</div> -->
       </div>
     </div>
     <div class="welcome">欢迎使用 {{ tookitName }}</div>
