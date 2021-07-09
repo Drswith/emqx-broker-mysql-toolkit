@@ -2,11 +2,11 @@
  * @Author: Drswith
  * @Date: 2021-06-29 21:21:04
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-30 13:42:19
- * @FilePath: \emqx-broker-mysql-gadget\src\components\ConfigMysql.vue
+ * @LastEditTime: 2021-07-09 20:50:05
+ * @FilePath: \emqx-broker-mysql-toolkit\src\views\setupMysql\index.vue
 -->
 <template>
-  <div class="setup-container">
+  <div class="page-container">
     <div class="step">{{ name }} 配置</div>
     <div class="step__item">
       <div class="step__item-title">请输入 {{ name }} 部署地址</div>
@@ -29,8 +29,8 @@
       <input class="dark-input" type="text" />
     </div>
     <div>
-      <button class="btn" @click="onPreviousStepClick">上一步</button>
-      <button class="btn btn__primary" @click="onNextStepClick">测试连接</button>
+      <button class="btn" @click="onPreviousClick">上一步</button>
+      <button class="btn btn__primary" @click="onNextClick">测试连接</button>
     </div>
   </div>
 </template>
@@ -47,11 +47,11 @@ export default {
   created() {},
   mounted() {},
   methods: {
-    onPreviousStepClick() {
-      this.$emit("onPreviousStepClick");
+    onPreviousClick() {
+      this.$router.back()
     },
-    onNextStepClick() {
-      this.$emit("onNextStepClick");
+    onNextClick() {
+       this.$router.push({name:'Index'})
     },
   },
   computed: {},

@@ -2,20 +2,31 @@
  * @Author: Drswith
  * @Date: 2021-07-09 09:20:27
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 10:17:47
- * @FilePath: \emqx-community-mysql-toolkit\src\routers\index.js
+ * @LastEditTime: 2021-07-09 20:28:39
+ * @FilePath: \emqx-broker-mysql-toolkit\src\routers\index.js
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Layout from '@/layouts/index.vue'
+import SetupLayout from '@/layouts/SetupLayout.vue'
+import MainLayout from '@/layouts/MainLayout.vue'
 
 Vue.use(VueRouter)
 export const constantRoutes = [
   //  根路由
   {
     path: '/',
-    component: Layout,
-    redirect: '/index',
+    // component: Layout,
+    redirect: '/setup',
+    // children: [{
+    //   path: 'index',
+    //   name: 'Index',
+    //   component: () => import('@/views/index/index.vue'),
+    //   meta: { title: '首页', icon: 'ico-home' }
+    // }]
+  },
+  {
+    path: '/index',
+    component: MainLayout,
     children: [{
       path: 'index',
       name: 'Index',
@@ -25,26 +36,26 @@ export const constantRoutes = [
   },
   {
     path: '/setup',
-    component: Layout,
+    component: SetupLayout,
     redirect: '/setup/begin',
     name: 'Setup',
     children: [
       {
         path: 'begin',
-        name: 'Begin',
-        component: () => import('@/views/setup/index.vue'),
+        name: 'SetupBegin',
+        component: () => import('@/views/setupBegin/index.vue'),
         meta: { title: '客户管理1', icon: 'ico-user' }
       },
       {
         path: 'emqx',
-        name: 'Emqx',
-        component: () => import('@/views/setup/index.vue'),
+        name: 'SetupEmqx',
+        component: () => import('@/views/setupEmqx/index.vue'),
         meta: { title: '客户管理2', icon: 'ico-user' }
       },
       {
         path: 'mysql',
-        name: 'Mysql',
-        component: () => import('@/views/setup/index.vue'),
+        name: 'SetupMysql',
+        component: () => import('@/views/setupMysql/index.vue'),
         meta: { title: '客户管理3', icon: 'ico-user' }
       }
     ]
