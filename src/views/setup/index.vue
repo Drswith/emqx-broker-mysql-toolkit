@@ -2,13 +2,13 @@
  * @Author: Drswith
  * @Date: 2021-06-29 19:48:20
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-08 20:32:55
- * @FilePath: \emqx-broker-mysql-toolkit\src\view\Setup.vue
+ * @LastEditTime: 2021-07-09 09:35:23
+ * @FilePath: \emqx-community-mysql-toolkit\src\views\setup\index.vue
 -->
 <template>
   <div class="container">
     <div class="setup-container">
-    <div v-show="step === 0">
+    <!-- <div v-show="step === 0">
       <SetupBegin
         @onPreviousStepClick="onPreviousStepClick"
         @onNextStepClick="onNextStepClick"
@@ -25,15 +25,15 @@
         @onPreviousStepClick="onPreviousStepClick"
         @onNextStepClick="onNextStepClick"
       />
-    </div>
+    </div> -->
   </div>
   </div>
 </template>
 
 <script>
-import SetupBegin from "@/components/SetupBegin.vue";
-import ConfigEmqx from "@/components/ConfigEmqx.vue";
-import ConfigMysql from "@/components/ConfigMysql.vue";
+// import SetupBegin from "@/components/SetupBegin.vue";
+// import ConfigEmqx from "@/components/ConfigEmqx.vue";
+// import ConfigMysql from "@/components/ConfigMysql.vue";
 export default {
   components: {
     SetupBegin,
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/style/style.scss";
+@import "@/styles/index.scss";
 .setup-container {
   // display: flex;
   // justify-content: center;
@@ -73,7 +73,7 @@ export default {
 }
 </style>
 <style lang="scss" >
-@import "@/style/style.scss";
+@import "@/styles/index.scss";
 // .setup-container {
 //   min-height: 80%;
 // }

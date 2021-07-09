@@ -2,8 +2,8 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:33:20
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-29 21:11:10
- * @FilePath: \emqx-broker-mysql-gadget\src\layout\SideBar.vue
+ * @LastEditTime: 2021-07-09 09:29:57
+ * @FilePath: \emqx-community-mysql-toolkit\src\layouts\components\SideBar.vue
 -->
 <template>
   <div class="side-bar-container">
@@ -32,7 +32,7 @@
 </template>
 <script>
 import { mapMutations } from "vuex";
-import Logo from "./Logo.vue";
+import Logo from "@/components/Logo.vue";
 import menuConfig from "@/config/menu";
 export default {
   name: "SideBar",
@@ -67,7 +67,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "@/style/style.scss";
+@import "@/styles/index.scss";
 .side-bar-container {
   background-color: $sidebar-bg;
   box-sizing: border-box;

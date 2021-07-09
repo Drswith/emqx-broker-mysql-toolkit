@@ -34,7 +34,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "@/style/style.scss";
+@import "@/styles/index.scss";
 .nav-container {
   display: flex;
   justify-content: space-between;

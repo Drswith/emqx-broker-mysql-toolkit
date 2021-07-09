@@ -56,7 +56,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "@/style/style.scss";
+@import "@/styles/index.scss";
 .container {
   display: flex;
   justify-content: center;
