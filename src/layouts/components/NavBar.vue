@@ -2,8 +2,8 @@
  * @Author: Drswith
  * @Date: 2021-06-27 22:13:48
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-27 22:17:47
- * @FilePath: \emqx-broker-mysql-gadget\src\components\Nav.vue
+ * @LastEditTime: 2021-07-09 10:20:46
+ * @FilePath: \emqx-community-mysql-toolkit\src\layouts\components\NavBar.vue
 -->
 <template>
   <div class="nav-container">
@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  name: "Nav",
+  name: "NavBar",
   components: {},
   props: {},
   data() {

@@ -2,11 +2,12 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:11:58
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 09:35:37
+ * @LastEditTime: 2021-07-09 09:59:10
  * @FilePath: \emqx-community-mysql-toolkit\src\views\index\index.vue
 -->
 <template>
   <div class="container">
+    i am index
     <!-- 左侧边栏 -->
     <!-- <SideBar /> -->
     <!-- 右侧内容区 -->
@@ -19,10 +20,10 @@
 // import Content from "@/layout/Content.vue";
 export default {
   components: {
-    SideBar,
-    Content,
+    // SideBar,
+    // Content,
   },
-  name: "Main",
+  name: "Index",
   data() {
     return {};
   },

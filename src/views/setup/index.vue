@@ -2,12 +2,13 @@
  * @Author: Drswith
  * @Date: 2021-06-29 19:48:20
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 09:35:23
+ * @LastEditTime: 2021-07-09 10:19:22
  * @FilePath: \emqx-community-mysql-toolkit\src\views\setup\index.vue
 -->
 <template>
   <div class="container">
     <div class="setup-container">
+      i am setup
     <!-- <div v-show="step === 0">
       <SetupBegin
         @onPreviousStepClick="onPreviousStepClick"
@@ -36,9 +37,9 @@
 // import ConfigMysql from "@/components/ConfigMysql.vue";
 export default {
   components: {
-    SetupBegin,
-    ConfigEmqx,
-    ConfigMysql,
+    // SetupBegin,
+    // ConfigEmqx,
+    // ConfigMysql,
   },
   name: "Setup",
   data() {

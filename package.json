@@ -9,6 +9,7 @@
   "dependencies": {
     "vite-plugin-vue2": "^1.4.0",
     "vue": "^2.6.12",
+    "vue-router": "^3.5.2",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

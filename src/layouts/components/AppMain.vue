@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:34:01
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 09:29:44
+ * @LastEditTime: 2021-07-09 10:21:04
  * @FilePath: \emqx-community-mysql-toolkit\src\layouts\components\AppMain.vue
 -->
 <template>
@@ -12,20 +12,20 @@
       <div class="app-main__header-title">
         {{ menuConfig[mainCurrentView].label }}
       </div>
-      <Nav />
+      <NavBar />
     </div>
     <!-- 内容 -->
     <div class="app-main__body">
-      占位符 {{ menuConfig[mainCurrentView].label }}
+      <router-view />
     </div>
   </div>
 </template>
 <script>
-import menuConfig from "@/config/menu";
-import Nav from "@/layout/Nav.vue";
+import menuConfig from "@/configs/menu";
+import NavBar from "./NavBar.vue";
 export default {
   name: "AppMain",
-  components: { Nav },
+  components: { NavBar },
   props: {},
   data() {
     return {

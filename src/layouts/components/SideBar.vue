@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:33:20
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 09:29:57
+ * @LastEditTime: 2021-07-09 10:18:43
  * @FilePath: \emqx-community-mysql-toolkit\src\layouts\components\SideBar.vue
 -->
 <template>
@@ -33,7 +33,7 @@
 <script>
 import { mapMutations } from "vuex";
 import Logo from "@/components/Logo.vue";
-import menuConfig from "@/config/menu";
+import menuConfig from "@/configs/menu";
 export default {
   name: "SideBar",
   components: { Logo },
