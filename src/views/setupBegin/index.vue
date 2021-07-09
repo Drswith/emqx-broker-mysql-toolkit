@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-29 20:33:48
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 20:42:08
+ * @LastEditTime: 2021-07-09 22:25:15
  * @FilePath: \emqx-broker-mysql-toolkit\src\views\setupBegin\index.vue
 -->
 <template>
@@ -78,31 +78,31 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 250px;
+  width: 25rem;
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 24px 0;
+    padding: 2.4rem 0;
   }
   &__img {
-    height: 72px;
-    margin: 0 0 8px;
+    height: 7.2rem;
+    margin: 0 0 0.8rem;
   }
   &__title {
     color: #fff;
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 .welcome {
   color: $color-text-2;
-  font-size: 24px;
-  margin-bottom: 4px;
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
 }
 .desc {
   color: $color-text-2;
-  font-size: 18px;
-  margin-bottom: 50px;
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
 }
 </style>

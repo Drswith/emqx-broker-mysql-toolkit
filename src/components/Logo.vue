@@ -2,8 +2,8 @@
  * @Author: Drswith
  * @Date: 2021-06-27 19:12:47
  * @LastEditors: Drswith
- * @LastEditTime: 2021-06-30 16:12:05
- * @FilePath: \emqx-broker-mysql-gadget\src\layout\Logo.vue
+ * @LastEditTime: 2021-07-09 22:27:33
+ * @FilePath: \emqx-broker-mysql-toolkit\src\components\Logo.vue
 -->
 <template>
   <div class="logo-container">
@@ -34,17 +34,17 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 24px 0;
+  padding: 2.4rem 0;
 }
 .logo {
   &__img {
-    width: 60px;
-    height: 60px;
-    margin: 0 0 8px;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 0 0.8rem;
   }
   &__title{
     color: #fff;
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 </style>

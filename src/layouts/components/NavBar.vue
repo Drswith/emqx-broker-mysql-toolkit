@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-27 22:13:48
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 22:16:05
+ * @LastEditTime: 2021-07-09 22:26:14
  * @FilePath: \emqx-broker-mysql-toolkit\src\layouts\components\NavBar.vue
 -->
 <template>
@@ -42,7 +42,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 24px;
+  font-size: 2.4rem;
   color: $nav-color-text;
 }
 
@@ -54,10 +54,10 @@ export default {
       cursor: pointer;
       user-select: none;
       display: flex;
-      font-size: 14px;
-      border: 1px solid $nav-color-text;
-      padding: 8px;
-      border-radius: 100px;
+      font-size: 1.4rem;
+      border: 0.1rem solid $nav-color-text;
+      padding: 0.8rem;
+      border-radius: 10rem;
     }
   }
 }

@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:33:20
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 21:58:56
+ * @LastEditTime: 2021-07-09 22:26:51
  * @FilePath: \emqx-broker-mysql-toolkit\src\layouts\components\SideBar.vue
 -->
 <template>
@@ -65,11 +65,11 @@ export default {
   &__item {
     display: flex;
     align-items: center;
-    height: 36px;
-    width: 145px;
-    border-radius: 4px;
-    margin: 10px;
-    padding: 0 20px;
+    height: 3.6rem;
+    width: 14.5rem;
+    border-radius: 0.4rem;
+    margin: 1rem;
+    padding: 0 2rem;
     transition: border-color 0.3s, background-color 0.3s, color 0.3s,
       box-shadow 0.3s;
     cursor: pointer;
@@ -79,14 +79,14 @@ export default {
       background-color: $sidebar-item-hover;
     }
     &-img {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
     }
     &-active {
       color: $sidebar-item-active-color-text !important;
       background-color: $sidebar-item-active !important;
-      box-shadow: 0 0 5px 0 $sidebar-item-active-shadow !important;
+      box-shadow: 0 0 0.5rem 0 $sidebar-item-active-shadow !important;
     }
   }
 }
