@@ -7,7 +7,7 @@
 -->
 <template>
   <div class="page-container">
-    i am index
+    i am Monitor
   </div>
 </template>
 
@@ -15,7 +15,7 @@
 export default {
   components: {
   },
-  name: "Index",
+  name: "Monitor",
   data() {
     return {};
   },

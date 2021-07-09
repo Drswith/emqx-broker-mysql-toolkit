@@ -2,12 +2,12 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:11:58
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 20:52:54
- * @FilePath: \emqx-broker-mysql-toolkit\src\views\index\index.vue
+ * @LastEditTime: 2021-07-09 20:54:37
+ * @FilePath: \emqx-broker-mysql-toolkit\src\views\setting\index.vue
 -->
 <template>
   <div class="page-container">
-    i am index
+    i am Setting
   </div>
 </template>
 
@@ -15,7 +15,7 @@
 export default {
   components: {
   },
-  name: "Index",
+  name: "Setting",
   data() {
     return {};
   },

@@ -2,15 +2,15 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:34:01
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 10:21:04
- * @FilePath: \emqx-community-mysql-toolkit\src\layouts\components\AppMain.vue
+ * @LastEditTime: 2021-07-09 21:53:13
+ * @FilePath: \emqx-broker-mysql-toolkit\src\layouts\components\AppMain.vue
 -->
 <template>
   <div class="app-main-container">
     <!-- 标题 -->
     <div class="app-main__header">
       <div class="app-main__header-title">
-        {{ menuConfig[mainCurrentView].label }}
+        {{pageTitle}}
       </div>
       <NavBar />
     </div>
@@ -21,30 +21,23 @@
   </div>
 </template>
 <script>
-import menuConfig from "@/configs/menu";
 import NavBar from "./NavBar.vue";
 export default {
   name: "AppMain",
   components: { NavBar },
   props: {},
   data() {
-    return {
-      menuConfig,
-    };
+    return {};
   },
   created() {},
   mounted() {},
   methods: {},
   computed: {
-    mainCurrentView() {
-      return this.$store.state.mainCurrentView;
-    },
+    pageTitle(){
+      return this.$route.meta.title
+    }
   },
-  watch: {
-    // mainCurrentView(newValue, oldValue) {
-    //   console.log("change");
-    // },
-  },
+  watch: {},
 };
 </script>
 <style lang="scss" scoped>

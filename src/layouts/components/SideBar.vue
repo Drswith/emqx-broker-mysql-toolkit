@@ -2,68 +2,56 @@
  * @Author: Drswith
  * @Date: 2021-06-27 18:33:20
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 10:18:43
- * @FilePath: \emqx-community-mysql-toolkit\src\layouts\components\SideBar.vue
+ * @LastEditTime: 2021-07-09 21:58:56
+ * @FilePath: \emqx-broker-mysql-toolkit\src\layouts\components\SideBar.vue
 -->
 <template>
   <div class="side-bar-container">
     <Logo title="Dashboard" />
-    <div class="menu">
-      <div
-        v-for="(item, idx) in menuConfig"
-        :key="idx"
-        :class="
-          mainCurrentView == idx ? 'menu__item menu__item-active' : 'menu__item'
-        "
-        @click="_onClick(idx)"
-      >
-        <icon-font :name="item.icon" customClass="menu__item-img" />
-        <div>{{ item.label }}</div>
-        <input
-          v-show="false"
-          type="radio"
-          :name="item.name"
-          :value="idx"
-          v-model="mainCurrentView"
-        />
+    <router-link
+      v-for="(item, idx) in menu"
+      :key="idx"
+      :to="{ name: item.name }"
+      v-slot="{ navigate, isActive }"
+      custom
+    >
+      <div class="menu">
+        <div
+          :class="isActive ? 'menu__item menu__item-active' : 'menu__item'"
+          @click="navigate"
+        >
+          <icon-font :name="item.meta.icon" customClass="menu__item-img" />
+          <div>{{ item.meta.title }}</div>
+        </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 <script>
-import { mapMutations } from "vuex";
 import Logo from "@/components/Logo.vue";
-import menuConfig from "@/configs/menu";
+import { constantRoutes } from "@/routers";
 export default {
   name: "SideBar",
   components: { Logo },
   props: {},
   data() {
     return {
-      menuConfig,
+      menu: [],
     };
   },
   created() {},
   mounted() {},
   methods: {
-    ...mapMutations({
-      changeMain: "CHANGE_MAIN", // 将 `this.changeMain()` 映射为 `this.$store.commit('CHANGE_MAIN')`
-    }),
-    _onClick(idx) {
-      this.changeMain(idx);
-    },
   },
   computed: {
-    mainCurrentView: {
-      get() {
-        return this.$store.state.mainCurrentView;
-      },
-      set(value) {
-        this.changeMain(value);
-      },
-    },
   },
-  created() {},
+  created() {
+    constantRoutes.forEach((item) => {
+      if (item.name == "Main") {
+        this.menu = item.children;
+      }
+    });
+  },
 };
 </script>
 <style lang="scss" scoped>

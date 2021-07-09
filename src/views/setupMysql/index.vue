@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-06-29 21:21:04
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 20:50:05
+ * @LastEditTime: 2021-07-09 21:14:56
  * @FilePath: \emqx-broker-mysql-toolkit\src\views\setupMysql\index.vue
 -->
 <template>
@@ -51,7 +51,7 @@ export default {
       this.$router.back()
     },
     onNextClick() {
-       this.$router.push({name:'Index'})
+       this.$router.push({name:'Main'})
     },
   },
   computed: {},

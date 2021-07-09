@@ -2,20 +2,23 @@
  * @Author: Drswith
  * @Date: 2021-06-27 22:13:48
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 10:20:46
- * @FilePath: \emqx-community-mysql-toolkit\src\layouts\components\NavBar.vue
+ * @LastEditTime: 2021-07-09 22:16:05
+ * @FilePath: \emqx-broker-mysql-toolkit\src\layouts\components\NavBar.vue
 -->
 <template>
   <div class="nav-container">
-    <icon-font
-      name="help"
-      customClass=""
-      style="font-size: 18px; margin-right: 20px"
-    />
-    <div class="nav__tags-github">
-      <div style="margin-right: 5px">Github</div>
-      <icon-font name="github" customClass="" />
-    </div>
+    <router-link to="/main">
+      <icon-font
+        name="help"
+        customClass=""
+        style="font-size: 18px; margin-right: 20px"
+      />
+    </router-link>
+    <a href="https://github.com" target="_blank">
+      <div class="nav__tags-github">
+        <div style="margin-right: 5px">Github</div>
+        <icon-font name="github" customClass="" /></div
+    ></a>
   </div>
 </template>
 <script>
@@ -57,5 +60,10 @@ export default {
       border-radius: 100px;
     }
   }
+}
+
+a {
+  text-decoration: none;
+  color: $nav-color-text;
 }
 </style>

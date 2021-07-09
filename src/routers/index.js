@@ -2,7 +2,7 @@
  * @Author: Drswith
  * @Date: 2021-07-09 09:20:27
  * @LastEditors: Drswith
- * @LastEditTime: 2021-07-09 20:28:39
+ * @LastEditTime: 2021-07-09 21:56:17
  * @FilePath: \emqx-broker-mysql-toolkit\src\routers\index.js
  */
 import Vue from 'vue'
@@ -15,25 +15,41 @@ export const constantRoutes = [
   //  根路由
   {
     path: '/',
-    // component: Layout,
     redirect: '/setup',
-    // children: [{
-    //   path: 'index',
-    //   name: 'Index',
-    //   component: () => import('@/views/index/index.vue'),
-    //   meta: { title: '首页', icon: 'ico-home' }
-    // }]
   },
+  // 主界面
   {
-    path: '/index',
+    path: '/main',
+    name: 'Main',
     component: MainLayout,
-    children: [{
-      path: 'index',
-      name: 'Index',
-      component: () => import('@/views/index/index.vue'),
-      meta: { title: '首页', icon: 'ico-home' }
+    redirect: '/main/dashboard',
+    children: [
+      {
+      path: 'dashboard',
+      name: 'Dashboard',
+      component: () => import('@/views/dashboard/index.vue'),
+      meta: { title: '控制台', icon: 'dashboard' }
+    },
+    {
+      path: 'database',
+      name: 'Database',
+      component: () => import('@/views/database/index.vue'),
+      meta: { title: '数据库', icon: 'database' }
+    },
+    {
+      path: 'monitor',
+      name: 'Monitor',
+      component: () => import('@/views/monitor/index.vue'),
+      meta: { title: '监视器', icon: 'tubiao' }
+    },
+    {
+      path: 'setting',
+      name: 'Setting',
+      component: () => import('@/views/setting/index.vue'),
+      meta: { title: '设置', icon: 'setting' }
     }]
   },
+  // 配置界面
   {
     path: '/setup',
     component: SetupLayout,
@@ -70,26 +86,9 @@ export const constantRoutes = [
   { path: '*', redirect: '/404', hidden: true }
 ]
 
-const createRouter = () => new VueRouter({
-  // mode: 'history', // require service support
+const router = new VueRouter({
   scrollBehavior: () => ({ y: 0 }),
   routes:constantRoutes // (缩写) 相当于 routes: routes
 })
 
-const router = createRouter()
-
-
-/*
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
-
-const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
-]
-
-const router = new VueRouter({
-  routes 
-})
-*/
 export default router
